@@ -25,29 +25,29 @@ Make sure you have the following installed on your local machine:
     cd chatapp
 
 2. Install dependencies for the frontend:
-
+    ```sh
     cd client
     npm install
 
 3. Install dependencies for the backend:
-
+    ```sh
     cd ../server
     npm install
 
 ### Running the Application
 
 1. Start the backend server:
-
+    ```sh
     cd server
     npm start
 
 2. Start the frontend development server:
-
+    ```sh
     cd ../client
     npm run dev
 
 ## Project Structure
-
+```plaintext
 chatapp/
 ├── client/                # Frontend code (React)
 │   ├── public/            # Public assets
