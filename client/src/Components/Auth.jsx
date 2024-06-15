@@ -5,7 +5,8 @@ const AuthPage = (props) => {
     e.preventDefault();
     const { value } = e.target[0];
     axios
-      .post("https://chat-server-vq9u.onrender.com/authenticate", { username: value })
+      .post("http://localhost:3001/authenticate", { username: value })
+      // eslint-disable-next-line react/prop-types
       .then((r) => props.onAuth({ ...r.data, secret: value }))
       .catch((e) => console.log("Auth Error", e));
   };
@@ -13,7 +14,7 @@ const AuthPage = (props) => {
   return (
     <div className="background">
       <form onSubmit={onSubmit} className="form-card">
-        <div className="form-title">Welcome to HaKim's ChatApp 👋</div>
+        <div className="form-title">Welcome to Talky ChatApp 👋</div>
 
         <div className="form-subtitle">Set a username to get started 🫣</div>
 

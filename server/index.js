@@ -16,6 +16,7 @@ app.post("/authenticate", async (req, res) => {
       { username: username, secret: username, first_name: username },
       { headers: { "Private-Key": process.env.PRIVATE_KEY } }
     );
+    // console.log("res : ", r.data);
     return res.status(r.status).json(r.data);
   } catch (e) {
     return res.status(e.response.status).json(e.response.data);
